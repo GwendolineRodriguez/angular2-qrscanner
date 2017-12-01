@@ -247,7 +247,7 @@ export class QrScannerComponent implements OnInit, OnDestroy, AfterViewInit {
         this.captureTimeout = setTimeout(captureToCanvas, this.updateTime);
     }
 
-    private get findMediaDevices(): Promise<{ deviceId: { exact: string }, facingMode: string } | boolean> {
+    private get findMediaDevices(): Promise<any> {
 
         const videoDevice =
             (dvc: MediaDeviceInfo) => dvc.kind === 'videoinput' && dvc.label.search(/back/i) > -1;
